@@ -1,0 +1,93 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./img/logo1.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo-list</title>
+  </head>
+  <body>
+    <script type="module" src="/src/main.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"> </script>
+    <div id="app" class="ToDo"></div>
+      <script src="https://unpkg.com/vue@next"></script>
+  <script>
+    // Load tasks from LocalStorage
+  function loadTasks() {
+    const todoTasks = JSON.parse(localStorage.getItem("todo")) || [];
+    const inProgressTasks = JSON.parse(localStorage.getItem("inProgress")) || [];
+    const doneTasks = JSON.parse(localStorage.getItem("done")) || [];
+
+    todoTasks.forEach(task => addTaskToColumn(task, "todo-column"));
+    inProgressTasks.forEach(task => addTaskToColumn(task, "progress-column"));
+    doneTasks.forEach(task => addTaskToColumn(task, "done-column"));
+  }
+
+  // Save tasks to LocalStorage
+  // Save tasks to LocalStorage
+function saveTasks() {
+const todoTasks = Array.from(document.getElementById("todo-column").children).map(child => child.textContent);
+const inProgressTasks = Array.from(document.getElementById("progress-column").children).map(child => child.textContent);
+const doneTasks = Array.from(document.getElementById("done-column").children).map(child => child.textContent)
+    localStorage.setItem("todo", JSON.stringify(todoTasks));
+    localStorage.setItem("inProgress", JSON.stringify(inProgressTasks));
+    localStorage.setItem("done", JSON.stringify(doneTasks));
+  }
+
+  function addTaskToColumn(task, columnId) {
+    const taskItem = document.createElement("p");
+    taskItem.textContent = task;
+    taskItem.style.cursor = "pointer";
+    
+    if (columnId === "todo-column") {
+      taskItem.onclick = moveToInProgress;
+    } else if (columnId === "progress-column") {
+      taskItem.onclick = moveToDone;
+    } else {
+      taskItem.onclick = deleteTask;
+    }
+
+    document.getElementById(columnId).appendChild(taskItem);
+  }
+
+  function addTask() {
+    const taskInput = document.getElementById("taskInput");
+    const task = taskInput.value.trim();
+    if (!task) {
+      alert("Please enter a task!");
+      return;
+    }
+    taskInput.value = "";
+
+    addTaskToColumn(task, "todo-column");
+    saveTasks();
+  }
+
+  function moveToInProgress() {
+    const task = this.textContent;
+    this.remove();
+    
+    addTaskToColumn(task, "progress-column");
+    saveTasks();
+  }
+
+  function moveToDone() {
+    const task = this.textContent;
+    this.remove();
+    
+    addTaskToColumn(task, "done-column");
+    saveTasks();
+  }
+
+  function deleteTask() {
+    this.remove();
+    saveTasks();
+  }
+  // Load tasks when the page is loaded
+  loadTasks();
+  </script>
+  </div>
+  </body>
+</html>

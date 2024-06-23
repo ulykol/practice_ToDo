@@ -1,0 +1,236 @@
+
+body{
+  background-color: #FFFFE0;
+}
+.header{  
+background-color: #f8d8dc;
+}
+  .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  .column {
+    width: 30%;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+  }
+
+.top__text{
+text-align: center;
+font-family: "Playwrite NZ", cursive; 
+font-style: normal; 
+font-size: 34px;
+}
+.undertoptext{
+  text-align: center;
+font-family: "Playwrite NZ", cursive; 
+font-style: normal; 
+font-size: 14px;
+}
+
+.container{
+
+
+  text-align: left;
+font-family: "Playwrite NZ", cursive; 
+font-style: normal; 
+font-size: 24px;
+}
+
+.column{
+
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
+  min-height: 400px;
+  border: 10px solid#f8d8dc;
+  width: 28%;
+  border-radius: 10px;
+  box-shadow: black 0 0 16px -6px;
+  border-bottom: none;
+  background: #E6E6FA;
+}
+
+.ToDO__text{
+text-align: center;
+ box-sizing: border-box;
+ width: 100%;
+ display: flex;
+
+}
+
+.Add__button{
+ width: 65px;
+  height: 25px;
+  display: inline-flex;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  justify-content: center;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #E6E6FA;
+  cursor: pointer;
+  padding: 5px;
+border-radius: 8px;
+text-align: center;
+margin: auto;
+display: flex;
+}
+
+.input {
+  box-sizing: border-box;
+  text-align: center;
+ flex-grow: 0.25;
+ border-radius: 8px;
+ width: 350px;
+ height: 35px;
+ margin: auto;
+}
+
+/* 
+body{
+  background-color: #FFFFE0;
+}
+.header{  
+background-color: #f8d8dc;
+}
+.top__text{
+text-align: center;
+font-family: "Playwrite NZ", cursive; 
+font-style: normal; 
+font-size: 34px;
+}
+.undertoptext{
+  text-align: center;
+font-family: "Playwrite NZ", cursive; 
+font-style: normal; 
+font-size: 14px;
+}
+.ToDo__input{
+  text-align: center;
+ box-sizing: border-box;
+ width: 100%;
+ display: flex;
+}
+.Add__button{
+ width: 65px;
+  height: 25px;
+  display: inline-flex;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  justify-content: center;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #E6E6FA;
+  cursor: pointer;
+  padding: 5px;
+border-radius: 8px;
+text-align: center;
+margin: auto;
+display: flex;
+}
+.ToDo__input input {
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #ffff;
+ flex-grow: 0.25;
+ border-radius: 8px;
+ width: 350px;
+ height: 35px;
+ margin: auto;
+}
+.ToDoBox__item {
+  text-align: left;
+font-family: "Playwrite NZ", cursive; 
+font-style: normal; 
+font-size: 24px;
+}
+
+.ToDoBox__item {
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
+  min-height: 400px;
+  border: 10px solid#f8d8dc;
+  width: 28%;
+  border-radius: 10px;
+  box-shadow: black 0 0 16px -6px;
+  border-bottom: none;
+  background: #E6E6FA;
+}
+.Section__ToDo {
+  text-align: center;
+  
+}
+.ToDo__Box {
+  display: flex;
+ 
+  margin-top: 30px;
+}
+
+.Firt__task {
+  border: 4px solid#f8d8dc;
+  width: 90%;
+  margin: 4px auto;
+  padding: 3px;
+  border-radius: 6px;
+  position: relative;
+  text-align: center;
+  background-color: #ffff;
+  font-family: 'Nunito', sans-serif;
+}
+.BTN__delete {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  color: crimson;
+  cursor: pointer;
+  font-size: 16px;
+}
+.delete:hover {
+  opacity: 0.8;
+}
+.btn, .btn1, .btn2 {
+  cursor: pointer;
+border-radius: 100px;
+font-family: 'Nunito', sans-serif;
+ background-color:#E6E6FA ;
+ font-size: 12px;
+ text-transform: uppercase;
+}
+.Section__InProgress {
+  text-align: center;
+}
+
+.Section__Done {
+  text-align: center;
+}
+button:focus {
+  outline: none;
+
+}
+.to_do p {
+  margin-top: 17px;
+  margin-bottom: 5px;
+  font-style: italic;
+  border-top: 1px solid darkslateblue;
+  display: block;
+  font-size: 17px;
+  padding-top: 10px;
+  word-wrap: break-word;
+}
+.number {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  font-size: 13px;
+  font-weight: bold;
+} */
